@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Assignment",
   "main": "index.js",
+  "proxy": {
+    "/pc-se": {
+      "target": "https://content.viaplay.se",
+      "changeOrigin": true
+    }
+  },
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"No test specified\" && exit 0"
@@ -23,6 +29,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "http-proxy-middleware": "^0.19.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   }
