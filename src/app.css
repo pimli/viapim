@@ -2,13 +2,22 @@ body {
     margin: 0;
 }
 
+a {
+    color: #96969b;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #323237;
+    transition: .3s;
+}
+
 #app {
     color: #333;
     background-color: #333;
     color: #96969b;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-   
   }
 
   #app #main {
@@ -44,7 +53,6 @@ body {
 
 .card {
     background-color: white;
-    border: 1px solid grey
 }
 
 .card h4 {
@@ -58,6 +66,24 @@ body {
     grid-gap: 15px;
 }
 
+.grid li {
+    padding: 10px;
+    width: auto;
+}
+
+.grid li img {
+    width: 100%;
+}
+
+.grid li a img{
+    filter: brightness(85%);
+ }
+
+.grid li a img:hover{
+    transition: .3s;
+    filter: brightness(100%);
+ }
+
 @media all and (min-width: 600px) {
     .grid {
         display: grid;
@@ -67,38 +93,14 @@ body {
     }
 
     .grid li {
-        padding: 5px;
         display: block;
         float: none;
-        width: auto;
-    }
-
-    .grid li.title {
-        width: auto;
-        grid-column: 1 / 4;
-    }
-
-    .grid li img {
-        width: 100%;
     }
 }
 
-@media all and (min-width: 60em) {
+@media all and (min-width: 990px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .grid li {
-        padding: 5px;
-      width: auto;
-    }
-
-    .grid li.title {
-      grid-column: 1 / 2;
-    }
-
-    .grid li img {
-      width: 100%;
     }
 }
 
@@ -106,18 +108,5 @@ body {
     .grid {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 8px;
-    }
-    
-    .grid li {
-        padding: 5px;
-      width: auto;
-    }
-
-    .grid li.title {
-      grid-column: 1 / 2;
-    }
-
-    .grid li img {
-      width: 100%;
     }
 }
