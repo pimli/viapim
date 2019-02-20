@@ -61,6 +61,9 @@ a:hover{
     margin-bottom: 4px;
 }
 
+
+
+
 .grid {
     display: grid;
     grid-gap: 15px;
@@ -84,6 +87,13 @@ a:hover{
     filter: brightness(100%);
  }
 
+@media all and (max-width: 599px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 8px;
+    }
+}
+
 @media all and (min-width: 600px) {
     .grid {
         display: grid;
@@ -101,12 +111,5 @@ a:hover{
 @media all and (min-width: 990px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media all and (max-width: 599px) {
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 8px;
     }
 }

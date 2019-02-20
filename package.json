@@ -3,12 +3,7 @@
   "version": "1.0.0",
   "description": "Assignment",
   "main": "index.js",
-  "proxy": {
-    "/pc-se": {
-      "target": "https://content.viaplay.se",
-      "changeOrigin": true
-    }
-  },
+  "proxy": "https://content.viaplay.se",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"No test specified\" && exit 0"

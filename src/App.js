@@ -25,7 +25,6 @@ class App extends Component {
             <div>
                 <Header />
                 {this.state.data && this.state.data.series.all && <ThumbNails series={this.state.data.series} />}
-                {/* <div id="page-footer"></div> */}
             </div>
         );
     }
