@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import URLLoader from './components/URLLoader';
 import ThumbNails from './components/thumbNail/ThumbNails'
+import Header from './components/Header'
 
 class App extends Component {
     constructor(props) {
@@ -16,14 +17,15 @@ class App extends Component {
     }
 
     onData(list) {
-        console.log('ää', list)
         this.setState({ data: list });
     }
 
     render() {
         return (
             <div>
-                {this.state.data && this.state.data.series.all && <ThumbNails series={this.state.data.series}/>}
+                <Header />
+                {this.state.data && this.state.data.series.all && <ThumbNails series={this.state.data.series} />}
+                <div id="page-footer"></div>
             </div>
         );
     }
