@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 const ThumbNail = ({ serie }) => {
     return (
-        <div className="thumbnail-card">
-            {/* <div className="thumb">
+        <li className="card">
+            <div className="thumb">
                 <img src={serie.img169}></img>
-            </div> */}
+            </div>
 
-            <div>{serie.title}</div>
-        </div>
+            <h4>{serie.title}</h4>
+            <div className="synopsis">{serie.synopsis}</div>
+        </li>
     );
 }
 

@@ -12,7 +12,7 @@ let callback = '';
 const URLLoader = (url, callback) => {
     let seriesRaw = data._embedded['viaplay:blocks'][0]._embedded['viaplay:products'];
     let series = seriesRaw.map(serieJ => cleanSeries(serieJ));
-
+console.log(seriesRaw)
     let list = {
         title: data.title,
         series: {
